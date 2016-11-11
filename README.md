@@ -1,0 +1,2 @@
+# animelocker_mymp4
+ANIME LOCKERでスマホ等にコピーするのにいい感じのファイル名のMP4リンクをSMBフォルダに作る
