@@ -68,8 +68,8 @@
 	    preg_match('/[0-9]{4}-[0-9]{4}_(.+)_(TS|HD|SD)_.+\.(MP4|ts)/',$filename,$fileelements); //先頭と末尾の余分な文字を除去
 	    $shortname = "{$fileelements[1]}.{$fileelements[3]}";
 
-	    //キーワード録画を除外（個人的ニーズ）
-	    if (strpos($shortname, "キーワード録画_") !== 0) {
+	    //キーワード録画、EPG録画を除外（個人的ニーズ）
+	    if (strpos($shortname, "キーワード録画_") !== 0 && strpos($shortname, "EPG録画_") !== 0) {
 	    	//サブタイトルを「」に入れる
 	    	$elem1 = explode(".",$shortname);
 	    	$elem2 = explode("_",$elem1[0]);
