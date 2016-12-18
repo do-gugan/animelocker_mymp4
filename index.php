@@ -73,7 +73,7 @@
 	    	//サブタイトルを「」に入れる
 	    	$elem1 = explode(".",$shortname);
 	    	$elem2 = explode("_",$elem1[0]);
-	    	$shortname = "{$elem2[0]}_$elem2[1]「{$elem2[2]}」.{$elem1[1]}";
+	    	$shortname = "{$elem2[0]}_".str_pad($elem2[1],2,'0', STR_PAD_LEFT)."「{$elem2[2]}」.{$elem1[1]}";
 	    	//シンボリックリンクを作成
 	    	//echo "target:".$filePath."<br />";
 	    	//echo "link:".$linkdir.$shortname."<br />";
