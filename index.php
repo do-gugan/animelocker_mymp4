@@ -39,13 +39,12 @@
 
 <?php
 
-	$year = filter_input(INPUT_GET, 'year', FILTER_VALIDATE_INT);
-	$month = filter_input(INPUT_GET, 'month', FILTER_VALIDATE_INT);
+	$year = filter_input(INPUT_GET, 'year', FILTER_SANITIZE_NUMBER_INT);
+	$month = filter_input(INPUT_GET, 'month', FILTER_SANITIZE_NUMBER_INT);
+	echo "month:".$month;
 
-	if ($year == 0) { $year = date('Y'); }
-	if ($month == 0) { $month = date('m'); }
-	$month = sprintf('%02d', $month);
-
+	if ($year == "") { $year = date('Y'); }
+	if ($month == "") { $month = date('m'); }
 ?>
 <form action="" method="GET">
 <input type="text" name="year" maxlength="4" size="4" value="<?php echo $year; ?>" />
